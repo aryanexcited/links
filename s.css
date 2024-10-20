@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(139, 134, 134);
+    font-family: 'Arial', sans-serif;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dpb 
+{
+    background-color:#333;
+    color: white;
+    text-align: center;
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1px;
+    border-radius: 30px;
+    display:flex;
+    padding: 10px 25px;
+    transition:background-color 0.3s ease tranform 0.2s ease;
+    width:200px;
+    justify-content:center;
+    text-transform:uppercase;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius:15px;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translatey(-100%);
+    }
+    to {
+        transform: translatey(0);
+    }
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    align-items:center;
+    flex-direction:column;
+    border-radius:10px;
+    min-width: 200px;
+    top:110%;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+.dropdown-menu a {
+    color: #00bfff;
+    padding:12px 20px;
+    display: flex;
+    font-weight:500;
+    width:100%;
+    justify-content: center;
+    text-decoration:none;
+    align-items: center;
+    transition:background-color 0.3s ease;
+    border-radius:10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(219, 214, 223);
+}
+
+.dropdown:hover .dpb {
+    background-color: #555;
+    transform: scale(1.2);
+}
+
+.dropdown:hover .dropdown-menu {
+    display:flex;
+}
+
+.dropdown-menu img.logo {
+    width: 40px; 
+    height: auto;
+    margin: 5px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-12px);
+        }
+        to  {
+            opacity: 1;
+        transform: translateY(0);
+    }
+}
